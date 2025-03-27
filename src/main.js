@@ -16,7 +16,7 @@ const loader = document.querySelector('.loader');
 const loadMoreBtn = document.querySelector('.load-more');
 const loadCompleteText = document.querySelector('.load-complete');
 
-let lightbox = new SimpleLightbox('.gallery a');
+let lightbox = new SimpleLightbox('.gallery li');
 
 let currentPage = 1;
 const perPage = 9;
