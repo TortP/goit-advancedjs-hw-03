@@ -1,42 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Search images</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="nav-logo" href="./index.html" aria-label="Site logo">
-            <svg class="nav-logo-icon" width="100" height="30">
-              <use href="{=$icon-path}"></use>
-            </svg>
-          </a>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-act}" href="./1-gallery.html"
-                >Gallery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-curr}" href="./2-form.html">Form</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <form class="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button type="submit">Search</button>
+    </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <div class="gallery"></div>
 
-    <load src="./partials/footer.html" />
+    <div class="load-more-wrapper">
+      <button class="load-more is-hidden">Load more</button>
+      <p class="loader-text is-hidden">Loading images, please wait…</p>
+      <p class="load-complete is-hidden">All images have been loaded.</p>
+    </div>
 
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
