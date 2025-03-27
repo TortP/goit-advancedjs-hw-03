@@ -10,9 +10,9 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { fetchImages } from './js/pixabay-api';
 import { createGalleryMarkup } from './js/render-functions';
 
-const form = document.querySelector('.search-form');
+const form = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
-const loader = document.querySelector('.loader-text');
+const loader = document.querySelector('.loader');
 const loadMoreBtn = document.querySelector('.load-more');
 const loadCompleteText = document.querySelector('.load-complete');
 
